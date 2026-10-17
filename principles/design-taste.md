@@ -1,4 +1,4 @@
-My Design Taste
+# My Design Taste
 1. My Core Design Philosophy
 My design priority is to balance usability, business goals, and visual quality.
 

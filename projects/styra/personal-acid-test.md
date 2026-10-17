@@ -1,4 +1,4 @@
-Styra — Persona Acid Test
+# Styra — Persona Acid Test
 Consolidated critique notes · 6 mobile screens · 17 October 2026 · Prepared for Hasib
 
 Review status
