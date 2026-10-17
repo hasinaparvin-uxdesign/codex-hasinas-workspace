@@ -4,8 +4,9 @@
 
 1. Read `README.md` and `projects/README.md` to understand the repository and select the intended project.
 2. Read `principles/codex-contract.md`, `principles/design-taste.md`, and `principles/anti-ai-slop.md` before analysis, design recommendations, or substantive edits.
-3. Read the selected project's README, working agreement if present, brief, and relevant reviews. Check for more specific `AGENTS.md` instructions in the directories being edited.
+3. Read the selected project's README, context, engagement, working agreement, and relevant brief, reviews, tokens, and latest log when present. Check for more specific `AGENTS.md` instructions in the directories being edited. Match the reading to the task rather than loading unrelated projects.
 4. Identify documented facts, draft proposals, assumptions, approved decisions, and unverified claims before acting. A finding marked FIX in a historical report does not establish that a source design was updated or the owner approved it.
+5. Read the relevant procedure from `skills/` for substantial design or career work. `.agents/skills/` provides Codex entry points that route to these canonical files; do not maintain a competing copy of the procedure there.
 
 ## Authority and scope
 
@@ -26,6 +27,16 @@
 - Use lowercase, hyphenated names and `.md` for Markdown. Retain meaningful existing names during moves; do not rename historical documents just to imply new status.
 - If a project grows, group reviews in `reviews/` and supporting images in `assets/`; update every affected reference when moving files. Create folders when there is content to place in them.
 - Keep source designs, before/after exports, and implementation artifacts distinguishable. Do not claim an asset is present until it is committed or linked to a verified source.
+- Reusable procedures belong in `skills/`; career positioning, portfolio stories, applications, and interview preparation belong in `career-vault/`. Shared workspace images belong in `assets/`, and product images in that project's assets folder when supplied.
+- Start a new project from `projects/_new-client/` only when requested. This template and the optional `_brief-bank/` index are not active clients or evidence of progress. Never fill them with fictional user facts or borrow another project's context.
+- Unfilled career files are templates, not evidence for a resume or application. Do not import facilitator identity, course outcomes, market assumptions, or unrelated example clients into the owner's work.
+
+## Continuity and design workflow
+
+- Resume a named project with `skills/pick-up.md`: read its latest log and check current files before relying on a handoff. At the end of substantial authorized work, use `skills/wrap-up.md` to preserve a concise, factual entry without inventing decisions or requiring redundant approval for routine notes.
+- Diagnose blockers using `skills/stuck.md` and available evidence. Make routine authorized repairs directly; ask only when the next step genuinely needs the owner's input or approval.
+- For new design work, clarify context and scope, consolidate a brief when authorized, map the journey, reuse or define tokens, plan tasks, build, and review. Reuse completed work and adapt the sequence to the task. Repository maintenance does not authorize the deferred Styra brief or require generating screens.
+- Templates explain what remains missing. An empty context, token record, career file, or log must not be described as completed research, an approved system, or a shipped result. Preserve original briefs and reports as sources when later work creates new versions.
 
 ## Maintenance and verification
 
