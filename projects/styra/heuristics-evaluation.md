@@ -1,5 +1,7 @@
 # Styra — Heuristic Evaluation: Screen 01 (Start)
 
+**Repository review — 18 October 2026:** This is a historical evaluation. The original screen and prototype are not in the repository, so the visual findings, behavior, and implementation status have not been independently verified here. Numeric severity labels in this report are separate from the High/Medium/Low labels in the other critiques; do not equate them without an agreed scale. See the [project evidence notes](README.md#evidence-and-next-work).
+
 **Project:** Styra — AI Shopping Assistant  
 **Screen:** 01 — Start  
 **Evaluation type:** Usability heuristic evaluation  

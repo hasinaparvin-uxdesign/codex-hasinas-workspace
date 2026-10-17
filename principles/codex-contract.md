@@ -1,7 +1,3 @@
-workspace
-claude-for-designers
-principles
-claude-contract.md
 # My Working Agreement with Codex
 
 ## Who I am

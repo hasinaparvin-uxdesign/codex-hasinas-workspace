@@ -1,2 +1,31 @@
-# hasina-ux-portfolio
+# Hasina — UX Portfolio
 UI/UX and user-centered product design portfolio focused on solving real-world problems by combining user research, business needs, interaction design, prototyping, design systems, and thoughtful visual design.
+
+## Start here
+
+- [Working agreement with Codex](principles/codex-contract.md): how we collaborate and who makes decisions.
+- [Design taste](principles/design-taste.md): the design standards applied across projects.
+- [Anti-AI-slop rules](principles/anti-ai-slop.md): checks for specific, useful design and clear copy.
+- [Project index](projects/README.md): project documents and their current status.
+- [Codex instructions](AGENTS.md): reading order, file placement, and maintenance workflow.
+
+## Where things belong
+
+```text
+AGENTS.md                      Instructions Codex reads when working here
+README.md                      Portfolio introduction and navigation
+principles/                    Shared design standards and working agreement
+projects/
+  README.md                    Project index
+  styra/                       AI Shopping Assistant agreement, brief, and reviews
+```
+
+Put a rule that applies across projects in `principles/`. Put a brief, review, decision, or design asset for one project inside its folder under `projects/`. Use lowercase names with hyphens and `.md` for Markdown documents. Folder names are literal names such as `principles`, without arrows or setup instructions.
+
+## Current focus
+
+The repository structure and shared principles are ready for ongoing maintenance. Developing the shopping-assistant brief is deferred. Existing project documents retain their original draft, pending-decision, and verification status.
+
+The owner confirmed that **Styra** is the product name of the AI Shopping Assistant. Its agreement, existing draft brief, and reviews now live together in [one project folder](projects/styra/README.md). That project index records the latest confirmed direction and the scope questions that remain open.
+
+Codex should edit the relevant files directly for authorized work, verify the changes, and report what was applied. The owner retains final product and design direction. Proposed changes to settled requirements or governing principles require approval. Published changes should be reviewed through a pull request before merging.
