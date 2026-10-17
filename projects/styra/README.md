@@ -15,12 +15,19 @@ Preserve the [project working agreement](codex-contract.md): consider delivery-i
 | Document | Scope and status |
 | --- | --- |
 | [Project working agreement](codex-contract.md) | Existing AI Shopping Assistant agreement, now filed under the confirmed product name; substantive content preserved |
+| [Context](context.md) | Confirmed user goal and audience direction, with evidence and research gaps explicit |
+| [Engagement status](engagement.md) | Current maintenance boundary and unagreed product delivery terms |
 | [V1 client brief](brief-v1-client.md) | Existing draft for review; not revised during repository organization |
 | [Original design review](design-review-original.md) | Start screen critique; decisions remain pending in that document |
 | [Heuristic evaluation](heuristics-evaluation.md) | Original Start screen; static-screen observations with behavior and accessibility limits |
 | [Persona acid test](personal-acid-test.md) | Historical six-screen critique using assumed personas; reports fixes to a recreated HTML copy |
+| [Critique index](critique-notes.md) | Entry point to the existing reports; no new design decisions or screen review |
+| [Design-system status](tokens.md) | Missing sources and bindings; no approved token values invented |
+| [Session log](log.md) | Current factual handoff and unresolved next decisions |
 
 Read the [shared working agreement](../../principles/codex-contract.md), [design taste](../../principles/design-taste.md), and [anti-AI-slop rules](../../principles/anti-ai-slop.md) alongside these documents.
+
+These context, engagement, critique, token-status, and log files follow the [reference workspace pattern](../../docs/reference-alignment.md). They provide navigation and truthful status; they do not create a new brief, approve a design system, or establish research. IA, implementation tasks, a revised brief, and real screens should be created only when that work is requested.
 
 ## Evidence and next work
 
