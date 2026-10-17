@@ -13,7 +13,8 @@
 - Make routine organization, link repairs, and authorized file updates directly. Do not ask the owner to copy changes manually when repository access allows the work.
 - Do not invent research, personas presented as research, metrics, screenshots, implementation status, or product requirements. Preserve source limitations and distinguish historical claims from checks performed now.
 - Do not silently change settled requirements or governing principles. Routine repository maintenance covers structural repairs, factual corrections, and navigation; substantive changes to design standards require owner approval.
-- Shopping-assistant brief development is deferred until the owner explicitly resumes it. Confirm the relationship between its project folder and Styra before consolidating their documents.
+- Styra is the owner's AI Shopping Assistant project. Its canonical folder is `projects/styra/`; read its `codex-contract.md` alongside the shared agreement and the owner-confirmed direction in its README. Keep future shopping-assistant work in that folder.
+- Brief development remains deferred until the owner explicitly resumes it. The existing V1 brief is a draft; its examples and unresolved scope assumptions must not override newer owner-confirmed direction. Record consequential discrepancies for the owner instead of silently rewriting the brief.
 - Shopping recommendations must preserve delivery-inclusive total cost, seller reliability, return conditions, honest handling of unavailable information, and explicit customer approval before ordering or payment. Do not infer that checkout belongs in V1 from this safeguard.
 - Treat examples in shared principles as illustrations of design judgment. An example involving checkout or a particular device does not add that capability or device requirement to every project's scope.
 

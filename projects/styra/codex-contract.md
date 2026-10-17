@@ -1,4 +1,4 @@
-# AI Shopping Assistant Project Working Agreement
+# Styra — AI Shopping Assistant Project Working Agreement
 
 ## Who this client is
 
