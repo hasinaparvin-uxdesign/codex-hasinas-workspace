@@ -1,5 +1,7 @@
 # Styra — Phase 1: Start Screen Critique
 
+**Repository review — 18 October 2026:** This is a historical critique. Its source screen is not in the repository, so its visual findings have not been independently verified here. “No changes implemented yet” and the pending decisions describe this report's scope; they do not establish the current source-design status. The `/design-review` skill is a historical method reference, not a required tool supplied by this repository. See the [project evidence notes](README.md#evidence-and-next-work).
+
 ## 1. Purpose
 
 This document records the first critique phase of Styra, an AI-powered shopping assistant.

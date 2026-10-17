@@ -12,9 +12,10 @@
 - Follow the owner's current request and preserve their final product and design authority. Apply the shared working agreement and the selected project's requirements together. If they conflict materially, explain the conflict and obtain the owner's decision before dependent work.
 - Make routine organization, link repairs, and authorized file updates directly. Do not ask the owner to copy changes manually when repository access allows the work.
 - Do not invent research, personas presented as research, metrics, screenshots, implementation status, or product requirements. Preserve source limitations and distinguish historical claims from checks performed now.
-- Do not silently change settled requirements or governing principles. The current organization task authorizes structural repairs and maintenance instructions, not a rewrite of the design standards.
-- The shopping-assistant brief is deferred. Do not expand it or merge its project folder with Styra without an owner instruction resolving that scope.
+- Do not silently change settled requirements or governing principles. Routine repository maintenance covers structural repairs, factual corrections, and navigation; substantive changes to design standards require owner approval.
+- Shopping-assistant brief development is deferred until the owner explicitly resumes it. Confirm the relationship between its project folder and Styra before consolidating their documents.
 - Shopping recommendations must preserve delivery-inclusive total cost, seller reliability, return conditions, honest handling of unavailable information, and explicit customer approval before ordering or payment. Do not infer that checkout belongs in V1 from this safeguard.
+- Treat examples in shared principles as illustrations of design judgment. An example involving checkout or a particular device does not add that capability or device requirement to every project's scope.
 
 ## File placement
 

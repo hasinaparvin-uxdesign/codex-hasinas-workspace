@@ -10,7 +10,7 @@ Personal design project for helping customers find suitable products within thei
 
 ## Current status
 
-The project working agreement is the only existing project document in this folder. Brief development is deferred; this organization task does not create or expand a brief.
+The project working agreement is the only substantive project document alongside this index. Brief development remains deferred until the owner resumes it.
 
 The agreement requires delivery-inclusive total cost, seller reliability, return conditions, clear disclosure of unavailable information, and explicit customer approval before an order or payment. Keep these requirements visible in future project work.
 
