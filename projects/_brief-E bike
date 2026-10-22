@@ -1,0 +1,520 @@
+E-Bike Ecommerce Website — Master Build Brief for Codex
+Project identity guard: This project is a dedicated electric-bike ecommerce website. It is NOT the separate AI shopping assistant / AI-powered ecommerce shopping platform project. Do not use the name, branding, features, architecture, or requirements of that separate platform here unless the user explicitly asks.
+
+Purpose: This document is the implementation brief for building the complete E-Bike Brand electric-bike ecommerce website, including responsive layouts, design system, interactions, animations, product browsing, and production-quality engineering.
+
+Important: Treat the attached/reference landing-page screenshot and the user's original Figma design as the visual source of truth. This brief captures the decisions discussed so far, plus recommended UX/engineering requirements. Some values are provisional because exact Figma tokens and the complete set of reference frames have not yet been inspected.
+
+Working method: Inspect first, plan briefly, implement in coherent milestones, run the app, test, compare against the supplied reference, and fix defects. Do not stop after generating a plan or a static mockup.
+
+1. Product vision
+Build a premium, modern, product-led ecommerce experience for electric commuter bikes. The experience should feel clean, confident, contemporary, trustworthy, and easy to shop.
+
+The website must:
+- Preserve the visual identity of the supplied reference image.
+- Use the reference image and source Figma frames as the primary visual authority.
+- Place the hero copy and calls to action on the left and the bicycle on the right on desktop.
+- Show the bike in the correct real-world orientation. In the supplied reference, the front wheel and handlebars are on the left and the saddle/rear wheel are on the right. Never mirror a product asset if that makes its geometry, branding, drivetrain, motor, or other manufacturer details inaccurate.
+- Use manufacturer-approved product names, color names, specs, and imagery wherever real product assets are supplied. Do not invent manufacturer facts.
+- Make the website responsive, accessible, performant, and maintainable.
+- Include subtle, polished motion, with a robust static/reduced-motion experience.
+- Establish reusable tokens and components so all pages remain visually consistent.
+- Complete a working implementation, not just a design proposal.
+2. Reference and source-of-truth rules
+Priority order
+1. User-provided original Figma design and frames.
+2. User-provided reference images.
+3. Exact manufacturer-approved product assets and documentation.
+4. This brief's provisional recommendations.
+5. Codex implementation judgment, only where no source evidence exists.
+Do not
+- Replace the visual style with a generic ecommerce template.
+- introduce unrelated colors, fonts, shadows, gradients, or component styles.
+- assume a screenshot-derived HEX value is the exact source token.
+- claim that a design token, font, spec, or asset is verified when it has not been inspected.
+- use an AI concept render as though it were the exact production bicycle.
+- mirror or reverse the bicycle to fit the composition without verifying its real geometry.
+- leave buttons, links, carousels, selectors, or forms as inert decoration.
+- use placeholder text or fabricated product specs in production UI.
+- overwrite or delete the user's existing project or design without understanding it first.
+Existing context
+- The user previously shared a Figma design link titled Figma-Pro_Hasina:
+  https://www.figma.com/design/uNAidTwsR7aBBWyR5gmiMF/Figma-Pro_Hasina?node-id=0-1&t=LqWhJtQbjYjPIVKZ-1
+- The user uploaded a landing-page screenshot called Landing Page_Bike.png. Make sure this image is available to Codex in the project or workspace. If not, ask the user to add it to the repository or provide it through the available attachment path. Do not fabricate a local path.
+- The supplied screenshot visually features a pale blue background/shape, mint/turquoise accents, dark oversized uppercase typography, navigation across the top, a prominent bicycle on the right, CTA on the left, a lower specifications panel, and peripheral carousel/side controls.
+- The prior attempt to inspect the Figma layer was unsuccessful because no layer was selected in the connected Figma context. If Figma access is available in the Codex environment, inspect the file and its actual selected frames/variables; otherwise use the supplied screenshot and record uncertainties.
+3. Visual direction
+Core look and feel
+- Premium minimalist electric-bike brand.
+- Product-led composition, generous negative space, clear typographic hierarchy.
+- Pale ice-blue and off-white surfaces, mint/turquoise accents, teal secondary elements, near-black text.
+- Bold editorial display typography balanced by readable body text.
+- Product photography/rendering should feel realistic and consistent.
+- Use decorative oversized text/shapes carefully; they must not obscure the bicycle or reduce text legibility.
+Provisional palette — visual estimates only
+These values were estimated from a screenshot and must be replaced by exact Figma tokens if available.
+Token suggestion	Provisional value	Intended use
+color.canvas	#F7FBFC	Main off-white page surface
+color.iceBlue	#D0E3F2	Hero background shape/surface
+color.mint	#82D6D0	Primary CTA and highlight
+color.teal	#639AAA	Secondary accent/action
+color.ink	#0B1516	Main text and display headline
+color.blueGray	#506970	Supporting text/labels
+color.white	#FFFFFF	Text on filled buttons/surfaces
+
+
+Create semantic tokens, not scattered raw values:
+- --color-bg
+- --color-surface
+- --color-surface-muted
+- --color-text
+- --color-text-muted
+- --color-primary
+- --color-primary-hover
+- --color-secondary
+- --color-border
+- --color-focus
+- status tokens for success, warning, error, and info as needed.
+Validate contrast, especially white text on mint. The provisional mint may not pass normal-text WCAG contrast with white. If it fails, use a darker text color or adjust the CTA shade while keeping the brand appearance. Do not compromise accessibility merely to preserve an estimated screenshot value. Check text and interactive states programmatically where possible.
+Typography
+The exact font family is not verified from the screenshot. Inspect Figma text styles and/or font files before selecting a family. If unavailable, select a clean, modern sans-serif that closely matches the reference and document the substitution.
+
+Define semantic type tokens:
+- Display/Hero
+- H1, H2, H3, H4
+- Body large, body, body small
+- Eyebrow/overline
+- Navigation
+- Button
+- Price
+- Product specification value and label
+- Caption/helper text
+Provisional responsive starting points (tune to match screenshot and content):
+- Hero display: clamp(3.5rem, 7vw, 6.25rem); heavy/bold, uppercase if matching the source.
+- Section H1: clamp(2.5rem, 5vw, 4.5rem).
+- H2: clamp(2rem, 3.5vw, 3.5rem).
+- H3: 1.5–2rem.
+- Body: 1rem–1.125rem, line height around 1.5.
+- Navigation: 0.875–1rem.
+- Buttons: 0.875–1rem, semibold.
+- Specification values: 1.125–1.25rem, semibold/bold.
+- Labels/captions: 0.8125–0.9375rem, with sufficient contrast.
+Typography rules:
+- Match exact family, weight, casing, letter spacing, and line height to Figma wherever possible.
+- Do not use too many families or weights.
+- Do not globally uppercase body text.
+- Avoid overly tight headline line-height that causes clipping.
+- Ensure long headlines wrap sensibly on mobile.
+Spacing, grid, and shape
+Use a documented 8px-based spacing scale where compatible with the reference:
+4, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, 120.
+Use shared layout tokens and a responsive container, e.g. a max-width around 1200–1320px if the source frame supports it. Do not force this width if the original design uses another grid.
+
+Provisional starting points:
+- Wide desktop page padding: 48–64px.
+- Tablet page padding: 24–32px.
+- Mobile page padding: 16–20px.
+- Buttons: roughly 52–60px high on desktop if matching the source; never below accessible touch target needs.
+- Small panel/card radii: use a small, consistent set, e.g. 6, 10, 16px, but inspect the reference first.
+- Use consistent borders and subtle shadows only where shown in the source.
+- Align header, hero text, product panel, and page sections to a shared grid.
+4. Hero section — key visual and UX requirements
+Desktop composition
+- Top navigation across the upper page.
+- Hero copy block and primary CTA on the left.
+- Main bicycle image on the right, slightly right of center if that matches the reference.
+- Preserve the pale blue/ice-blue decorative backdrop and mint/teal accents from the screenshot.
+- Keep generous negative space around text.
+- Bicycle should be large enough to read clearly, but its silhouette, wheels, handlebars, and saddle must remain visible.
+- Do not allow the bicycle to collide visually with the heading, CTA, navigation, or specs panel.
+- Keep any oversized background word/decorative typography behind the product as a low-priority layer; control opacity/contrast and cropping so it supports rather than competes.
+- Ensure the hero product image is a single coherent bicycle, not a collage or malformed AI output.
+Bicycle direction and asset integrity
+- The intended reference orientation is handlebars/front wheel at left; saddle/rear wheel at right.
+- Verify with the actual asset and manufacturer imagery. A side-view image may vary by manufacturer; don't assume the motor/drivetrain side based only on a generic rule.
+- Never flip an image to fix direction until product geometry, logos, drivetrain, brake details, and source reference have been checked.
+- Prefer manufacturer-approved product imagery or a verified 3D model for launch.
+- AI concept imagery may be used for portfolio/concept work only and must be identified as concept if it does not depict the actual product.
+- Provide descriptive alt text, e.g. Electric commuter bike, side view, only if that accurately describes the image.
+Hero content
+The reference appears to include:
+- Eyebrow: LET’S RIDE THE
+- Main display headline: FUTURE (check full original copy/frame before implementing final text)
+- A short supporting paragraph
+- Primary CTA: PRE ORDER
+- Top navigation including product-related links and a LOGIN action
+- A lower specifications strip/panel with three stats
+- Side/edge navigation or carousel controls
+- A floating plus/additional-information control near the lower-right area
+Do not invent product claims. The screenshot appears to show figures such as 50 km/h, 600 W, and 3.5 hr, but these must be treated as unverified reference content until checked against manufacturer-approved documentation and applicable market rules. Do not publish these as real specs without verification. If they are only visual placeholders, mark them as demo data during development and remove/replace before launch.
+Hero UX refinements to test
+1. Ensure heading/paragraph/CTA hierarchy is clear.
+2. Create enough separation between text and bicycle.
+3. Keep product fully recognizable and not cropped unintentionally.
+4. Make primary CTA the clearest action.
+5. Ensure secondary navigation does not compete with the CTA.
+6. Reduce oversized background lettering if it competes with product/readability.
+7. Align text, CTA, specs, and controls to a deliberate grid.
+8. Verify visible text contrast.
+9. Check all clickable areas and focus indicators.
+10. On small screens, reflow layout rather than simply scaling the desktop composition down.
+Provisional hero layout
+Use CSS Grid/Flexbox, not brittle absolute positioning for all layout:
+- Desktop: two-column composition, text column and product column.
+- Tablet: tighter columns, reduce display type, reposition specs.
+- Mobile: navigation collapses to a functional menu; headline and CTA remain prominent; bike appears as a large image beneath or adjacent to copy; specs become a horizontally scrollable or stacked layout if needed; hide/de-emphasize nonessential decorative side controls.
+- Use absolute positioning only for intentional decorative elements that need layering.
+5. Entire website scope
+Codex must inspect the existing repository first. Implement the sections that exist in the Figma/design/reference and complete any necessary ecommerce flow sections below. Do not assume every listed section exists in the screenshot. Preserve the actual design where it exists, and document any sections added to make the website functional.
+A. Global header/navigation
+- Brand logo/wordmark.
+- Product/category navigation.
+- Any story/about/support links that are present in the source.
+- Login/account action if required.
+- Mobile menu with keyboard support.
+- Sticky or fixed behavior only if the reference/UX calls for it.
+- Visible hover, active, focus, and pressed states.
+- Ensure header does not cover hero content or anchors.
+B. Hero
+- Headline, eyebrow, paragraph, primary CTA.
+- Product image and decorative shapes.
+- Specifications panel, if confirmed.
+- Carousel controls only if multiple real slides/products exist.
+- Optional product detail/plus control if it has a meaningful action.
+- Reduced-motion fallback.
+C. Product discovery/listing
+If product listing is part of the intended website:
+- Product cards with consistent image aspect ratio, product name, verified price, short description, and relevant CTA.
+- Manufacturer-approved color names/variants; never label product colors only by HEX values in customer-facing UI.
+- Color swatches with accessible names and selected states.
+- Product image updates when variant changes if assets are available.
+- Filtering/sorting only if supported by actual catalog data.
+- Empty/loading/error states.
+D. Product detail
+- Product gallery with correct image orientation and responsive image sizes.
+- Product name, verified price, availability, delivery/returns info where known.
+- Variant selection (size/model/color) with clear selected state.
+- Specs table and product features.
+- Quantity selector only if appropriate.
+- Add-to-cart action with feedback.
+- Accordion/tabs for technical details, shipping, warranty, and FAQs if content exists.
+- Related products if the catalog supports them.
+- Never invent warranty, delivery, performance, or safety claims.
+E. Cart and checkout
+If the scope includes a functional shop:
+- Add/remove/update quantity.
+- Cart subtotal and transparent fees; don't fabricate taxes or shipping costs.
+- Empty cart state.
+- Checkout form validation, keyboard accessibility, and clear errors.
+- Integrate an actual payment provider only if credentials and backend setup are provided. Never collect or store raw payment card details in the frontend.
+- Use a secure backend and server-side price validation for real transactions.
+- If backend/payment is unavailable, provide a clearly labeled demo checkout and document that it is not production commerce.
+- Confirmation/error states.
+F. Supporting content sections
+Inspect reference/Figma and implement only the sections that fit the actual design/content, potentially including:
+- Product benefits/features
+- Performance/technical specifications
+- Lifestyle/product imagery
+- Brand story
+- Testimonials/reviews (only real/approved content; no fabricated testimonials)
+- FAQ
+- Newsletter signup (wire to a real provider only if available)
+- Footer with real navigation/contact/social links
+- Legal/privacy/cookie pages where required for actual deployment
+G. Account/login
+Only build a functional account flow if the project/backend supports it. Otherwise create a truthful demo or disabled state with clear documentation. Never fake successful authentication.
+6. Reusable component architecture
+Create reusable, accessible components appropriate to the existing stack. Suggested component inventory:
+- SiteHeader
+- MobileNavigation
+- SiteFooter
+- HeroSection
+- BikeProductVisual
+- PrimaryButton
+- SecondaryButton
+- IconButton
+- ProductSpecs
+- ProductCard
+- ProductGallery
+- ColorVariantSelector
+- ProductFilters (only if needed)
+- QuantitySelector
+- CartDrawer or CartPage
+- Accordion
+- FeatureSection
+- NewsletterForm (only if integrated)
+- Toast/InlineFeedback
+- LoadingState
+- EmptyState
+- ErrorState
+Rules:
+- Reuse shared components instead of copying styles between pages.
+- Component variants should be explicit and typed if using TypeScript.
+- Keep product data separate from UI markup.
+- Use semantic HTML and accessible labels.
+- Use tokens for colors, type, spacing, radii, and shadows.
+- Avoid creating abstractions for one-off decorative elements unless it improves clarity.
+7. Animation and motion specification
+The user explicitly wants animation included. Implement subtle premium motion that enhances product presentation without slowing shopping or reducing accessibility.
+Recommended animation sequence for hero
+Initial load:
+1. Background/decorative shapes settle or fade in subtly.
+2. Eyebrow and headline appear with a short opacity/vertical reveal.
+3. Supporting copy and CTA follow with a small stagger.
+4. Bike visual fades in and translates a few pixels into its resting position.
+5. Specs panel fades/slides in gently.
+6. After entrance, the composition settles. Avoid endless dramatic movement.
+Provisional timing (tune after visual comparison):
+- Overall intro: around 600–1000ms.
+- Text stagger: 70–120ms.
+- Small translation: 8–20px.
+- Standard easing: a restrained ease-out/cubic-bezier curve.
+- Interaction transitions: typically 150–250ms.
+- Do not delay access to the CTA until a long animation finishes.
+- Avoid large parallax, constant floating, fast spinning wheels, or distracting motion by default.
+Scroll animations
+- Reveal feature sections once as they enter view.
+- Keep motion restrained and do not hide content from assistive technology.
+- Avoid layout shifts during animation.
+- Use Intersection Observer or an existing animation library appropriate to the stack.
+- Do not animate every paragraph or component; preserve performance.
+Interactive motion
+- Buttons: subtle color/background transition and small press feedback.
+- Product cards: restrained hover state; do not rely on hover for essential information.
+- Color selection: clear selected-state change and image transition if variant assets exist.
+- Accordion/cart drawer/mobile menu: smooth open/close with correct focus management.
+- Carousel: controlled transition with working previous/next and accessible slide labels if a real carousel is needed.
+Reduced motion and fallback
+- Respect prefers-reduced-motion: reduce.
+- Reduced-motion mode should remove parallax, large transforms, staggered entrances, and nonessential continuous animation.
+- The website must remain complete and readable with animations disabled.
+- Use CSS transforms and opacity where possible; avoid animating layout-heavy properties.
+- Avoid animation dependencies unless already present or justified by the project.
+- Do not invent or depend on a video/3D asset that does not exist. If no verified 3D model is provided, use the real product image and subtle 2D motion. Document the limitation.
+Optional 3D
+Do not add WebGL/Three.js merely for novelty. Only use a verified 3D product asset and an acceptable performance budget. If there is no real model, use a static image and CSS motion. Never fabricate product geometry and pass it off as manufacturer-accurate.
+8. Responsive design requirements
+Test at minimum:
+- Wide desktop: 1440px and above.
+- Standard laptop: around 1280px.
+- Tablet: 768–1024px.
+- Mobile: 390px and 360px.
+- Also verify a narrow viewport and zoom/reflow.
+Requirements:
+- No horizontal overflow.
+- No text overlap or clipping.
+- Product remains recognizable.
+- Navigation works via touch and keyboard.
+- CTA remains prominent and usable.
+- Specs remain legible.
+- Buttons/interactive targets meet accessibility expectations (aim for about 44×44 CSS px where practical).
+- Decorative elements cannot cover text or controls.
+- Image crops preserve bicycle wheels/handlebars/saddle.
+- Breakpoints should be based on content and layout needs, not device names alone.
+- Test at 200% zoom and verify content reflows appropriately.
+9. Accessibility requirements
+Target WCAG 2.2 AA where applicable:
+- Semantic headings and landmarks.
+- Correct focus order.
+- Visible keyboard focus.
+- Accessible names for icon-only controls.
+- Meaningful alt text; decorative assets use empty alt text.
+- Form fields have labels and understandable errors.
+- Sufficient contrast; validate color combinations rather than relying on appearance.
+- No information communicated by color alone.
+- Motion preference support.
+- Keyboard-accessible menus, dialogs, carousel, selectors, and accordions.
+- Focus trapping and restoration for modal/drawer patterns.
+- Use aria-live only where useful for cart/status announcements.
+- Links navigate; buttons perform actions.
+- No clickable div elements without appropriate semantics/keyboard behavior.
+10. Engineering and implementation approach
+First inspect the repo
+Before changing files:
+1. Identify framework, package manager, routing, styling method, component conventions, and existing tests.
+2. Inspect current project structure and installed libraries.
+3. Find existing assets, fonts, design tokens, product data, and components.
+4. Preserve useful existing work.
+5. Report the intended implementation plan briefly, then proceed unless blocked by a genuinely missing requirement.
+Technology choice
+- Prefer the repository's existing stack and conventions.
+- If the repo is empty, choose a modern maintainable React-based stack with TypeScript and a lightweight styling strategy compatible with the environment.
+- Avoid replacing the stack without a strong reason.
+- Avoid adding dependencies for features that can be implemented well with existing tools.
+Quality requirements
+- Clean, typed, maintainable components.
+- No TypeScript/lint/build errors.
+- No broken links or console errors.
+- Avoid giant monolithic components.
+- Keep data/config separate from visual components.
+- Use responsive images and appropriate lazy loading for below-the-fold media.
+- Hero image should load promptly and be sized appropriately; don't lazy-load the primary LCP image.
+- Reserve image dimensions/aspect ratio to prevent layout shift.
+- Use local/optimized assets for production rather than temporary external URLs.
+- Use environment variables for secrets; never commit secrets.
+- Avoid unsafe HTML injection.
+- Add tests where useful and supported by the project.
+- Implement real states for loading, errors, success, empty cart, and variant selection.
+- Do not leave TODOs for core requested functionality unless the dependency truly requires credentials/assets/backend. Document such blockers explicitly.
+11. SEO, metadata, and performance
+- Meaningful page title and meta description.
+- Canonical URL only when deployment URL is known.
+- Open Graph/social preview metadata with actual assets.
+- Appropriate heading hierarchy.
+- Descriptive product URLs if routing supports them.
+- Product structured data only when verified product facts, price, availability, and currency are known.
+- Sitemap/robots configuration appropriate to the framework/deployment.
+- Optimized image formats and responsive srcset/framework equivalents.
+- Avoid loading large animation libraries on routes that don't need them.
+- Avoid excessive JS and third-party scripts.
+- Aim for strong Core Web Vitals, especially LCP, CLS, and INP.
+- Keep decorative animation from blocking interaction.
+- Add a clear fallback if media fails to load.
+12. Product data, assets, and content integrity
+Use a clear data layer, for example a typed product object with:
+- id / slug
+- manufacturer-approved name
+- model
+- description
+- price and currency (verified)
+- availability (verified)
+- color variants with manufacturer names
+- image paths for each angle/variant
+- technical specifications with units and source
+- shipping/warranty data only if confirmed
+Do not use color HEX codes as customer-facing color names. The user explicitly asked to use manufacturer-approved names and imagery for product color variants. If the exact names or imagery are unavailable, mark the field as awaiting verification rather than inventing a name.
+
+For any placeholder data:
+- Clearly identify it as demo-only in code/data.
+- Keep it out of production copy.
+- Do not present the screenshot's speed, motor power, or charging time as verified facts until confirmed.
+Asset requirements:
+- Preserve the bicycle's intended direction and geometry.
+- Use exact supplied static assets when appropriate.
+- Do not redraw/substitute an available real product asset.
+- Optimize assets without altering the product.
+- Maintain consistent angle, crop, scale, and lighting across variants.
+- Use a proper fallback if an image is unavailable.
+13. Suggested design tokens file
+Create a central token source using the project's styling conventions. If CSS variables are suitable, use a file similar to the following, but replace provisional values with inspected Figma values:
+:root {
+  /* Provisional until compared with actual Figma tokens */
+  --color-bg: #F7FBFC;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #D0E3F2;
+  --color-primary: #82D6D0;
+  --color-secondary: #639AAA;
+  --color-text: #0B1516;
+  --color-text-muted: #506970;
+  --color-border: rgba(11, 21, 22, 0.14);
+  --color-focus: #245F6B;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+
+  --container-max: 82.5rem;
+  --page-gutter: clamp(1rem, 4vw, 4rem);
+
+  --motion-fast: 160ms;
+  --motion-normal: 220ms;
+  --motion-enter: 750ms;
+}
+Important: confirm text-on-primary contrast and adjust the semantic foreground for buttons if required. Never assume white text on the provisional mint shade meets AA contrast.
+14. Functional behavior checklist
+- [ ] Header links route to the intended pages/sections.
+- [ ] Mobile menu opens/closes, supports keyboard, and closes on navigation.
+- [ ] Primary CTA performs the intended action.
+- [ ] Login link has a truthful destination/state.
+- [ ] Carousel controls work if carousel content exists.
+- [ ] Floating plus/info control has a meaningful action or is removed.
+- [ ] Color swatches update selection and the correct product asset when available.
+- [ ] Product card links open the correct detail route.
+- [ ] Add-to-cart updates the cart and gives accessible feedback.
+- [ ] Cart quantities/removal/subtotal work if commerce is in scope.
+- [ ] Forms validate and report errors accessibly.
+- [ ] Accordion/tab states work with keyboard.
+- [ ] Loading, empty, error, and success states are implemented where needed.
+- [ ] Links and controls have hover/focus/pressed/disabled states.
+- [ ] Motion respects reduced-motion preferences.
+- [ ] No console errors or broken assets.
+15. Validation and visual QA
+After implementation:
+1. Start the app using the repo's documented development command.
+2. Inspect the rendered website in a browser if browser tooling is available.
+3. Compare the hero screenshot to the supplied reference, not to a newly invented design.
+4. Check heading width, line breaks, image scale/orientation, grid, spacing, CTA dimensions, nav alignment, spec panel, and decorative layers.
+5. Inspect every major page/section at desktop, tablet, and mobile widths.
+6. Test keyboard navigation and reduced-motion behavior.
+7. Run formatter, linter, typecheck, tests, and production build where configured.
+8. Fix all in-scope visual and functional defects.
+9. Report what is complete, what was tested, and any genuine blockers.
+10. Do not claim a test or visual comparison was performed if it was not.
+Definition of done
+- Website runs locally.
+- Core pages and interactions work.
+- Visual style matches the supplied source reference.
+- Shared design tokens/components are used consistently.
+- Responsive layouts work without overlap/overflow.
+- Product direction/assets remain correct.
+- Animations are subtle, performant, and accessible.
+- No invented real-world product specifications or testimonials.
+- No broken images/links or build/type/lint errors in the supported project setup.
+- Remaining external dependencies are documented clearly.
+16. Implementation milestones
+Work in this order and keep the app runnable between milestones.
+Milestone 0 — Repository and reference inspection
+- Inspect repository, stack, routes, assets, tests, and dependencies.
+- Locate the uploaded reference image and source Figma frame if available.
+- Identify verified versus provisional tokens/content.
+- Provide a short implementation plan and proceed.
+Milestone 1 — Design foundation
+- Create token files, typography system, container/grid, buttons, links, focus states, and base responsive rules.
+- Use the reference to calibrate tokens.
+- Avoid rebuilding pages independently.
+Milestone 2 — Hero section
+- Implement the hero faithfully.
+- Use the correct bike asset and direction.
+- Add the primary CTA, decorative backdrop, specs panel only with verified/demo-labeled content, and necessary controls.
+- Implement subtle entrance motion and reduced-motion fallback.
+- Compare the rendered page against the screenshot and correct mismatches.
+Milestone 3 — Remaining content sections
+- Implement the actual sections found in the reference/Figma.
+- Reuse tokens/components.
+- Add only content sections that are genuinely required by the product/site scope.
+Milestone 4 — Product and shopping flow
+- Product cards, detail page, color variants, cart, and checkout to the extent supported by the repository and supplied data/services.
+- Do not fake backend/payment/auth behavior.
+Milestone 5 — Responsive, accessibility, and motion audit
+- Test all listed viewport classes.
+- Test keyboard, contrast, focus, reduced motion, and real interaction states.
+- Optimize images, loading, and animation.
+Milestone 6 — Final QA and handoff
+- Run all available checks and production build.
+- Fix issues.
+- Document run commands, architecture, assets needed, provisional values, and any backend/provider setup still required.
+17. Instructions to Codex — execution behavior
+You are the implementing engineer. The user has asked for the entire website, not just a plan.
+- Begin by inspecting the current workspace and repo.
+- Do not ask the user to repeat requirements already in this document.
+- Do not stop at analysis or scaffolding; implement the website and test it.
+- If the source reference or asset isn't in the workspace, search existing project assets and available context first. If still unavailable, continue with a documented approximation and list the missing source as a blocker to exact visual matching.
+- If manufacturer assets/specs are missing, build a clear asset/data interface and use a non-production placeholder only when necessary; do not invent official product facts.
+- If no backend is present, implement the front-end experience with honest demo behavior and clearly state what is required for production transactions.
+- Make sound design/engineering decisions without asking for approval at every small step.
+- Keep the result cohesive and production-minded.
+- Use the user-provided reference as the visual target. Do not add unrelated design styles.
+- Finish with a concise handoff: pages/components built, interactions/animations, commands to run, checks passed, and outstanding dependencies.
+Start now with Milestone 0, then implement Milestones 1–6.
