@@ -1,0 +1,615 @@
+# MASTER PROMPT FOR CODEX
+## Hasina Parvin Deepa — Premium Product / UX Design Portfolio
+
+### 1. Your Mission
+
+Act as a senior product designer, UX strategist, visual design lead, and experienced frontend engineer.
+
+Your task is to build my personal portfolio website, **Hasina Parvin Deepa — UX / Product Design Portfolio**, using my existing Figma portfolio as the primary visual reference and the attached screenshots as evidence of my current design direction.
+
+This is an existing, partially designed portfolio. Do not discard it and create an unrelated design from scratch.
+
+Your objective is to **preserve and refine my existing visual identity while building a polished, responsive, accessible, production-quality portfolio website** that communicates my product-thinking abilities, UX expertise, visual design craft, and work on digital and AI-powered products.
+
+The finished portfolio should appeal to both:
+- Employers, recruiters, and product-design hiring managers.
+- Potential freelance clients looking for UX/UI design, digital product design, and related services.
+
+The design direction is **Balanced Premium**: editorial, distinctive, sophisticated, and visually expressive, while remaining clear, usable, credible, and professional.
+
+---
+
+### 2. Reference Materials
+
+**Primary Figma reference:**
+
+https://www.figma.com/design/uNAidTwsR7aBBWyR5gmiMF/Figma-Pro_Hasina?node-id=332-182&t=kZVrFrjQBebSIxhs-1
+
+The referenced node is `332:182` — Portfolio Website.
+
+**Additional reference material:**
+- The full-page screenshot of my current portfolio supplied with this prompt.
+- Any additional screenshots, project images, assets, and reference files supplied alongside this prompt.
+- The existing repository and its configuration, if provided.
+
+#### Rules for using references
+
+1. Inspect the existing codebase before making implementation decisions.
+2. Inspect the supplied screenshot carefully and use the actual Figma design as the primary visual reference wherever accessible.
+3. Preserve the existing design's identity, including its dark canvas, beige panels, gold accents, editorial typography, oversized section numbers, and layered compositions.
+4. Improve the hierarchy, readability, consistency, usability, and responsiveness without unnecessarily replacing existing design decisions.
+5. If Figma cannot be accessed, use the supplied screenshots and files. Do not pretend to have inspected inaccessible frames or hidden design details.
+6. Do not invent missing Figma specifications, assets, project results, personal achievements, or business metrics.
+7. Where the design leaves details unresolved, make sensible, consistent implementation decisions that preserve the intended aesthetic.
+
+---
+
+### 3. My Professional Positioning
+
+My name is **Hasina Parvin Deepa**.
+
+My portfolio should position me as a multidisciplinary designer working across UX/UI design, product thinking, user-centered problem-solving, visual design, and digital product experiences.
+
+My professional direction includes:
+- UX Designer opportunities.
+- Product Designer opportunities.
+- UX Research-related opportunities.
+- AI Product / UX opportunities.
+- Freelance UX/UI and digital product design projects.
+
+My strengths and interests include:
+- Customer research and understanding user needs.
+- Stakeholder conversations and collaboration.
+- Feature definition and product requirements.
+- UX strategy and problem definition.
+- End-to-end product design, including contributions toward MVP development.
+- UI and visual design.
+- Interaction design and prototyping.
+- E-commerce and digital product experiences.
+- AI-powered product concepts and experiences.
+- Feedback-informed iteration and continued improvement.
+
+Present these capabilities accurately. Do not imply that I led, owned, or completed work unless the supplied evidence supports that claim.
+
+My portfolio should demonstrate that I care about solving meaningful problems, not just producing attractive screens.
+
+#### Core positioning principle
+
+**Solve the problem before designing the screen.**
+
+I want visitors to understand how I think, why I make design decisions, how I work with users and product constraints, and how visual design supports the overall experience.
+
+#### Proposed primary positioning statement
+
+“I design digital experiences around real human needs.”
+
+#### Proposed supporting statement
+
+“I bring together UX research, product thinking, and thoughtful visual design to create useful digital experiences—from e-commerce journeys to emerging AI-powered products.”
+
+You may refine the wording to improve clarity and naturalness, but preserve the meaning. Do not make unsupported claims about business impact or measurable outcomes.
+
+---
+
+### 4. Visual Direction: Balanced Premium
+
+The existing design uses a distinctive editorial aesthetic. Retain that identity.
+
+#### Core visual characteristics
+
+- Black or near-black background.
+- Warm beige and taupe panels.
+- Muted gold accents.
+- Editorial serif typography for expressive headlines.
+- A clean, highly readable complementary typeface for body text and UI.
+- Large, decorative numbered section identifiers.
+- Intentional layered panels and overlapping compositions.
+- High-quality project imagery.
+- A sophisticated personal-brand presentation.
+
+The aesthetic should feel considered and distinctive, not like a generic SaaS template or an ordinary portfolio theme.
+
+#### Color direction
+
+Use the existing Figma colors as the source of truth when accessible.
+
+If exact design tokens cannot be retrieved, use these as provisional visual references, then centralize them into editable design tokens:
+
+- Near-black: approximately `#0B0B0A`.
+- Charcoal: approximately `#242321`.
+- Warm beige: approximately `#C4AD94`.
+- Muted gold: approximately `#B98D4A`.
+- Warm off-white: approximately `#F5F0E9`.
+
+These are working references inspired by the screenshot, not verified original Figma color values.
+
+Use color consistently:
+- Dark backgrounds for the main portfolio sections.
+- Beige for selected panels and the closing contact section.
+- Gold for restrained accents, small labels, dividers, and selected highlights.
+- High-contrast text for readable body copy and interactive elements.
+
+Do not use gold for small text if it becomes difficult to read. Check contrast rather than relying on visual appearance alone.
+
+#### Typography
+
+Use a clear typographic hierarchy.
+
+- Expressive serif typography for the name treatment, main headlines, and editorial section headings.
+- Readable typography for descriptions, project metadata, buttons, and navigation.
+- Clear distinction between headings, body copy, labels, captions, and supporting information.
+- Consistent font weights, line heights, letter spacing, and responsive sizing.
+
+My name may retain the decorative treatment shown in Figma, but it must remain recognizable and readable. Decorative lettering should enhance the design rather than obscure my identity.
+
+Do not introduce many unrelated fonts or decorative text treatments.
+
+#### Layout and spacing
+
+- Preserve the existing visual composition where it works.
+- Establish a consistent grid and spacing system.
+- Align text, panels, cards, images, and buttons deliberately.
+- Use intentional negative space.
+- Maintain consistent section padding and content widths.
+- Avoid accidental clipping, cramped text, arbitrary overlaps, and inconsistent image sizing.
+- Keep oversized section numbers as signature visual elements, but ensure they do not interfere with content or navigation.
+
+The layered editorial layout is intentional. Do not remove all overlap simply to make the design conventional. Refine each overlap so that the composition remains attractive and the content stays usable.
+
+---
+
+### 5. Website Information Architecture
+
+Build the portfolio as a coherent personal-brand experience with the following structure.
+
+#### Section 01 — Hero
+
+Purpose: Immediately communicate who I am, my professional direction, and where visitors should go next.
+
+Include:
+- My name: Hasina Parvin Deepa.
+- A concise, compelling professional headline.
+- A short supporting description.
+- My location: Lisbon, Portugal, if still accurate.
+- Availability information only if it is current and confirmed.
+- A primary CTA to explore my work.
+- A secondary CTA to contact me.
+- The portrait or visual element from the existing design, where suitable.
+
+Suggested headline:
+
+“Designing thoughtful digital experiences through product thinking and visual craft.”
+
+Suggested supporting copy:
+
+“I bring together UX research, product thinking, and visual design to create clear, useful digital experiences—from e-commerce journeys to emerging AI-powered products.”
+
+Possible CTA labels:
+- Explore Selected Work
+- Get in Touch
+
+Preserve the existing editorial hero style, including the dark background, name treatment, gold accents, and image composition.
+
+Improve text readability, visual hierarchy, and the prominence of the primary CTA.
+
+The hero should quickly communicate my identity and value without overwhelming visitors with too much text.
+
+#### Section 02 — Selected Works
+
+Purpose: Demonstrate the quality of my work and encourage visitors to explore detailed case studies.
+
+Preserve the existing project-showcase concept and the oversized “02” visual treatment if it remains effective.
+
+Feature up to three projects, chosen for complementary strengths rather than visual appearance alone.
+
+Each project card should include:
+- Project name.
+- Product or project type.
+- A concise description of the problem or goal.
+- My role, where verified.
+- Relevant project imagery.
+- A clear case-study link.
+
+Use consistent card proportions, image treatment, spacing, text hierarchy, and hover behavior.
+
+Project cards must be accessible and genuinely navigable. Avoid making a card look clickable when it does nothing.
+
+Do not merge different projects into one case study. Each project must retain its own context, problem, scope, role, design decisions, and evidence.
+
+If detailed project content has not yet been supplied, create a clearly structured placeholder or a concise overview based only on verified information. Do not fabricate a finished case study.
+
+#### Section 03 — My Design Approach
+
+Purpose: Show how I approach design problems and make decisions.
+
+Preserve the existing design-process concept:
+
+1. Understand.
+2. Learn.
+3. Define.
+4. Design.
+
+Use concise explanations that visitors can understand without specialist knowledge.
+
+The section should communicate that I aim to:
+- Understand user needs and the context of the problem.
+- Learn from available research, feedback, and evidence.
+- Define the problem and relevant constraints.
+- Explore and design appropriate solutions.
+- Iterate based on feedback and validation where available.
+
+Retain the editorial section layout and large “03” visual element.
+
+The explanatory copy must be readable and well organized.
+
+Where possible, connect the process to examples in actual project case studies. Do not imply that every project followed an identical process or that research, testing, or validation occurred unless evidence confirms it.
+
+#### Section 04 — About Me & Capabilities
+
+Purpose: Communicate my background, working style, and relevant design capabilities.
+
+The current screenshot contains repeated “About Me / My Biography” content. Consolidate this into one clear, primary biography rather than repeating nearly identical paragraphs across the page.
+
+Possible section heading:
+
+“A little about how I work.”
+
+Suggested draft copy:
+
+“I design digital experiences around real human needs. I bring together customer insights, product thinking, and thoughtful visual design to create useful digital experiences.
+
+My work and interests span UX/UI design, product definition, customer research, visual design, and feedback-informed iteration. I value curiosity, collaboration, practical judgment, and a willingness to keep learning.
+
+I believe effective design goes beyond visual polish. It requires understanding the problem, making deliberate decisions, and creating experiences that serve both users and product goals.”
+
+Refine this copy for readability and authenticity without inventing additional personal facts or achievements.
+
+Organize capabilities into relevant groups, where supported by my actual skills:
+
+- UX & Research.
+- Product Thinking & Definition.
+- UI & Visual Design.
+- Interaction Design & Prototyping.
+- Digital & E-commerce Experiences.
+- AI-Powered Product Experiences.
+
+Do not represent every item as an expert-level skill simply because it appears in this list. Use accurate labels and evidence from my projects.
+
+Keep the section visually connected to the existing black, beige, and gold design language.
+
+If the existing eBitans panel is retained near this section, make it clear whether it represents a project, professional experience, or a separate featured case study. Do not repeat the same biography there.
+
+#### Section 05 — Contact / Let's Connect
+
+Purpose: Make it easy for employers and potential freelance clients to contact me.
+
+Preserve the existing contrasting beige footer and editorial “LET'S CONNECT” presentation.
+
+Include, where actual details are available:
+- A clear closing headline.
+- A short invitation to discuss opportunities or meaningful projects.
+- A prominent contact CTA.
+- My email address.
+- My LinkedIn profile.
+- My CV link.
+- A suitable portrait or personal-brand image from the supplied assets.
+
+Suggested headline:
+
+“Let’s create something meaningful.”
+
+Use clear alignment and spacing between the message, image, and contact details.
+
+The footer should feel like a deliberate conclusion to the page rather than an unrelated design block.
+
+Do not invent an email address, LinkedIn URL, CV URL, or contact details. If any are missing, create an obvious, easy-to-update placeholder in the code and document what must be supplied.
+
+---
+
+### 6. Project Identity and Case-Study Requirements
+
+Project separation is a critical requirement.
+
+**eBitans AI and eCommerce X are two different projects. Do not confuse them, combine them, or transfer features and decisions from one project into the other.**
+
+#### Project A — eBitans AI
+
+eBitans AI is an AI-powered e-commerce website builder.
+
+It should be presented as its own project, with its own context and design decisions.
+
+Where supported by the available evidence, the case study may explore:
+- The target users and their needs.
+- The challenge of helping businesses establish an online store.
+- The product's website-building experience.
+- Relevant user journeys, requirements, and UX decisions.
+- The visual and interaction design.
+- My actual role and contribution.
+- Feedback, validation, implementation, or results where verified.
+
+Do not automatically describe eBitans AI as a completed, launched, or successful product unless the evidence supports that description.
+
+#### Project B — eCommerce X
+
+eCommerce X is a separate e-commerce project.
+
+Keep its user problem, business context, scope, screens, design decisions, and outcomes independent from eBitans AI.
+
+Do not assume the two projects share the same business model, audience, features, or implementation.
+
+#### Project C — Optional complementary project
+
+A third project may be included if it demonstrates a meaningful additional capability, such as:
+- Strong UI and visual design.
+- A distinct end-to-end UX case study.
+- An AI-powered product concept.
+- Another relevant digital product experience.
+
+Select the project based on evidence and the quality of its contribution to the portfolio. Do not create a fictitious project to fill the space.
+
+#### Case-study structure
+
+Build detailed case studies as separate pages or routes, not as enormous blocks of text on the main homepage.
+
+Use this structure as appropriate to the available evidence:
+
+1. Project overview.
+2. User problem and business context.
+3. Goals, scope, and constraints.
+4. My role and collaborators.
+5. Research, discovery, and requirements.
+6. Problem definition and key insights.
+7. Design exploration and alternatives.
+8. Important UX and UI decisions.
+9. Final screens and interaction details.
+10. Validation, feedback, implementation, and outcomes.
+11. Reflection and future improvements.
+
+Not every project needs every section.
+
+Distinguish clearly between verified facts, research findings, assumptions, hypotheses, and proposed improvements. If metrics or research evidence are unavailable, do not invent them.
+
+Use actual supplied screenshots and assets where available. Avoid generic placeholder visuals that misrepresent the real product.
+
+---
+
+### 7. Interaction and Motion Design
+
+The portfolio should feel polished and interactive without becoming distracting.
+
+Use restrained, purposeful motion such as:
+- Subtle entrance transitions for major sections.
+- Gentle image reveals as content enters the viewport.
+- Refined hover states for project cards.
+- Small transitions on buttons and links.
+- Clear focus and active states for interactive elements.
+- Subtle navigation transitions, if appropriate.
+
+Motion should reinforce the editorial aesthetic and guide attention.
+
+Requirements:
+- Avoid excessive parallax, unnecessary looping animations, or distracting movement.
+- Avoid long entrance delays that hide important content.
+- Ensure core content remains accessible if animation is disabled or unsupported.
+- Respect the user's reduced-motion preference.
+- Ensure hover interactions also have appropriate keyboard focus and touch behavior.
+- Keep animation performant on typical devices.
+
+Do not add motion to every element just because animation is available. Prioritize the hero, project cards, meaningful section transitions, and CTA feedback.
+
+---
+
+### 8. Responsive Design
+
+The desktop screenshot is the starting point, not the only supported layout.
+
+Build and validate:
+- Desktop.
+- Tablet.
+- Mobile.
+
+On smaller screens:
+- Reflow multi-column sections into an appropriate single-column or compact layout.
+- Keep text readable without horizontal scrolling.
+- Resize decorative section numbers so they do not overwhelm the content.
+- Rework overlapping panels instead of simply shrinking the desktop composition.
+- Ensure project images retain appropriate aspect ratios and focal points.
+- Make buttons, links, and navigation easy to use with touch.
+- Keep the hero headline, selected projects, and contact CTA prominent.
+- Prevent clipped text, overlapping content, and accidental overflow.
+- Make the beige contact section feel consistent with the rest of the page.
+
+Do not treat mobile responsiveness as an afterthought or create a separate visual identity for mobile.
+
+---
+
+### 9. Accessibility and Usability
+
+Implement the website with accessibility in mind.
+
+Requirements:
+- Semantic HTML and appropriate heading hierarchy.
+- Accessible navigation and interactive controls.
+- Descriptive link labels.
+- Meaningful alternative text for informative images.
+- Empty alternative text for purely decorative images where appropriate.
+- Sufficient color contrast.
+- Visible keyboard-focus states.
+- Keyboard-accessible navigation and project links.
+- Appropriate form labels and error feedback if a contact form is implemented.
+- Reduced-motion support.
+- No essential information communicated only through color or hover.
+- No tiny text that becomes unreadable on mobile.
+
+Prefer a simple, understandable user experience over unnecessary technical complexity.
+
+---
+
+### 10. Technical Implementation
+
+First inspect the existing repository, framework, package manager, scripts, components, and asset organization.
+
+Then implement the portfolio within the existing project structure wherever practical.
+
+#### Implementation principles
+
+- Reuse existing components and design decisions where appropriate.
+- Follow the existing framework and conventions.
+- Avoid replacing working project configuration without a clear need.
+- Use reusable components for the header/navigation, hero, project cards, section headings, biography, and contact footer.
+- Centralize colors, typography, spacing, and other repeated design tokens.
+- Keep content and project metadata organized so they can be updated easily.
+- Use semantic, maintainable code.
+- Optimize supplied images appropriately without damaging their quality.
+- Avoid unnecessary dependencies.
+- Do not introduce fake backend integrations or nonfunctional controls.
+- Do not use broken image paths, fake contact details, or unfinished links presented as working features.
+
+If a contact form is added, do not claim it sends messages unless an actual working submission mechanism exists. A correctly configured email link is preferable to a nonfunctional form.
+
+If the repository already contains a functioning application, preserve its existing working features and avoid unrelated refactoring.
+
+If no application code exists, establish a sensible implementation using the available environment and dependencies. Do not claim a framework or deployment configuration has been verified before inspecting it.
+
+---
+
+### 11. Content Integrity and Professional Credibility
+
+The portfolio must represent my actual experience honestly.
+
+Never:
+- Invent client names, testimonials, user quotes, research findings, or business metrics.
+- Claim a product launched or succeeded without evidence.
+- Claim that I owned a project end-to-end if my contribution was narrower.
+- Present a concept as a shipped product.
+- Mix eBitans AI and eCommerce X.
+- Add unsupported professional credentials.
+- Fill missing information with fabricated details.
+
+Where details are missing:
+- Use clearly identified placeholders.
+- Keep uncertain claims out of public-facing copy.
+- Make the content easy to update.
+- Record the missing information in the final handoff.
+
+The portfolio should communicate confidence without exaggeration.
+
+---
+
+### 12. Quality Assurance
+
+After implementation, do not stop at producing the initial page.
+
+Run the available checks and inspect the actual result.
+
+#### Visual checks
+- Does the website resemble the supplied Figma design?
+- Is the black, beige, and gold identity preserved?
+- Is the name readable?
+- Are the headings, body text, and buttons appropriately differentiated?
+- Are section numbers decorative without obstructing content?
+- Are project cards aligned and visually consistent?
+- Are image proportions and crops correct?
+- Are overlaps intentional?
+- Is there any unexplained empty space?
+- Does the contact footer feel connected to the page?
+
+#### Functional checks
+- Do navigation links work?
+- Do project cards open the correct project?
+- Are the case-study routes valid?
+- Do email, LinkedIn, and CV links point to the correct supplied destinations?
+- Do buttons perform their stated actions?
+- Are there broken images or console errors?
+- Does the site load and run using the repository's intended commands?
+
+#### Responsive checks
+- Inspect desktop, tablet, and mobile layouts.
+- Check for horizontal scrolling.
+- Check typography, images, and spacing at narrow widths.
+- Confirm that important content and actions remain accessible.
+
+#### Accessibility checks
+- Check semantic structure, contrast, keyboard navigation, focus states, alternative text, and reduced-motion behavior.
+
+Use available browser, test, and build tools to verify the results. Fix issues discovered during testing instead of merely listing them.
+
+Do not claim that a check passed unless it was actually run or verified.
+
+---
+
+### 13. Implementation Workflow
+
+Work in the following order.
+
+**Phase 1 — Inspect**
+1. Inspect the repository and determine the existing framework and run commands.
+2. Review the supplied screenshots and available design assets.
+3. Identify the existing pages, components, styles, and dependencies.
+4. Record important implementation constraints.
+
+**Phase 2 — Plan**
+1. Map the current design to the agreed information architecture.
+2. Identify which existing elements should be preserved, refined, consolidated, or removed.
+3. Map the project cards to the correct project identities.
+4. Identify missing assets, copy, and links.
+
+**Phase 3 — Build**
+1. Refine the shared design tokens and typography.
+2. Implement the hero and navigation.
+3. Implement selected projects and case-study routes.
+4. Implement the design approach and consolidated About section.
+5. Implement the contact footer.
+6. Add purposeful motion, responsive behavior, and accessibility features.
+
+**Phase 4 — Validate**
+1. Run the project using its intended commands.
+2. Check build and runtime errors.
+3. Test the main interactions and routes.
+4. Inspect desktop and mobile behavior.
+5. Compare the result against the supplied screenshot.
+6. Fix important visual and functional issues.
+
+**Phase 5 — Handoff**
+Provide:
+- A summary of what was implemented.
+- The files and components created or changed.
+- Commands to run the project.
+- A list of assets, content, and contact details still needed.
+- Any checks actually completed and any unresolved issues.
+- A concise explanation of meaningful deviations from the supplied Figma design.
+
+Do not stop after writing a plan. Once you understand the existing codebase and reference materials, proceed with implementation.
+
+If a noncritical detail is missing, use a clearly documented, reasonable default and continue. Ask for clarification only when a missing detail blocks a correct or safe implementation.
+
+---
+
+### 14. Definition of Done
+
+The portfolio is ready for review when:
+
+- The existing visual identity has been preserved and improved.
+- The hero communicates my professional positioning clearly.
+- Selected projects are presented consistently and honestly.
+- eBitans AI and eCommerce X remain separate projects.
+- The design approach communicates a thoughtful problem-solving process.
+- Repetitive About content has been consolidated.
+- Capabilities are presented clearly and accurately.
+- Contact information and actions are easy to find.
+- Detailed case studies have their own appropriate pages or routes.
+- Desktop, tablet, and mobile layouts have been implemented and checked.
+- Motion is purposeful and respects reduced-motion preferences.
+- Accessibility and functional behavior have been checked.
+- The application runs using its intended commands.
+- Missing assets and unverified content are documented rather than fabricated.
+
+### Final Instruction
+
+Build a portfolio that feels like **Hasina Parvin Deepa's own design work**—not a generic portfolio template.
+
+Keep the existing editorial identity, improve the information architecture, showcase real project thinking, demonstrate strong visual craft, and make the site easy for employers and freelance clients to understand and navigate.
+
+Make deliberate decisions. Preserve what works. Refine what does not. Verify the result.
+
+**The goal is not merely a beautiful website. The goal is a distinctive, credible, professional portfolio that demonstrates how I think and design.**
