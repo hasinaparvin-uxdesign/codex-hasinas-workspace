@@ -1,111 +1,244 @@
-# My Design Taste
+---
+created: 2026-10-31
+type: working-standard
+status: active
+tags: [design-principles, design-taste, product-design, ux, accessibility, codex]
+---
 
-## 1. My Core Design Philosophy
+# Design Taste — Hasina's Working Standard
 
-My design priority is to balance usability, business goals, and visual quality.
+## Purpose
 
-A design should solve real user problems, make the experience comfortable and understandable, and support the business objectives. Visual beauty alone does not make a design successful, and usability alone is not enough if the design fails to communicate the product's value.
+This file defines the design quality I aim to create across digital products. Use it when framing a design direction, creating or implementing an interface, and reviewing a result.
 
-Before starting any design, understand the product, its users, their needs, the business goals, and the requirements. Every important design decision should have a clear reason.
+My goal is not to make every product look the same. It is to make each experience clear, useful, distinctive, accessible, and appropriate to its users and context.
 
-## 2. Hierarchy Before Decoration
+**Guiding principle: solve the problem before designing the screen.**
 
-Every screen should have a clear visual hierarchy and a primary user task.
+These principles are working standards, not universal laws. Apply judgment, explain meaningful trade-offs, and refine the standards as real project evidence accumulates.
 
-- Make the most important action easy to identify.
-- Avoid multiple prominent buttons competing for attention.
-- Organize content according to user needs and task priority.
-- Ensure that visual emphasis guides users toward the intended action.
-- Do not add elements simply to make a screen look more impressive or visually busy.
+## How to use this file
 
-**Rule:** If users cannot quickly understand what matters most on a screen, improve the hierarchy before adding visual effects.
+Before design work, read the project brief and identify the user, task, context, constraints, and intended outcome. Then use this file to guide decisions. Use `anti-ai-slop.md` as the companion quality-control checklist.
 
-## 3. Remove Unnecessary Elements
+Do not assume that a visual preference is evidence. Separate:
+- **Verified facts:** supported by supplied research, analytics, requirements, or direct inspection.
+- **Observations:** what can be seen in the product, interface, or provided material.
+- **Hypotheses:** reasonable explanations or predictions that still need validation.
+- **Unknowns:** information not yet available.
 
-I do not accept visual elements that add complexity without improving the user experience, business outcome, or product identity.
+Never invent user research, product requirements, metrics, or validation results to justify a design.
 
-Remove or reconsider:
+## 1. Decision hierarchy
 
-- Unnecessary gradients, glowing orbs, and decorative abstract shapes.
-- Repeated cards or sections that communicate nearly identical information.
-- Icons that do not improve meaning, recognition, or usability.
-- Decorative effects that have no clear connection to the product or brand.
-- Generic headlines and vague marketing copy that provide little useful information.
-- Animations that distract users, delay important actions, or make the interface feel unnecessarily slow.
+When goals conflict, use this hierarchy to structure the decision. It is a guide for reasoning, not permission to ignore context.
 
-These elements are not forbidden in every situation. They must have a clear purpose and be justified by the specific product and context.
+1. **User needs and task success:** Can the intended user understand what is happening and make progress on their real task?
+2. **Accessibility and inclusive usability:** Can people with different abilities, devices, input methods, language needs, and levels of familiarity use the experience?
+3. **Product goals and constraints:** Does the design support the actual product objective, business requirements, technical feasibility, and delivery constraints?
+4. **Clarity and consistency:** Are content, hierarchy, terminology, patterns, and interaction behavior coherent?
+5. **Visual craft and product identity:** Does the experience feel intentional, distinctive, polished, and appropriate for its audience?
+6. **Decorative enhancement:** Does an extra visual effect or animation add meaning or improve the experience enough to justify its cost?
 
-**Rule:** Every element must earn its place by improving usability, communicating meaning, supporting business goals, or strengthening the product's identity.
+If a decision requires a trade-off, state what is being prioritized, what is being sacrificed, and how the decision could be validated.
 
-## 4. Typography: Product-Specific and Consistent
+## 2. Context before components
 
-Typography should reflect the product's purpose, audience, brand personality, and content. I do not want to use a font simply because it is popular or trending.
+Do not choose a layout or visual style before understanding the situation.
 
-- Choose fonts that suit the product and its audience.
-- Maintain a clear and consistent type scale, with deliberate font sizes, weights, and line heights.
-- Use typography to establish hierarchy and improve readability.
-- Use distinctive or editorial typography when it strengthens the brand without sacrificing usability.
-- Verify that selected fonts support all required languages and scripts, including Bangla when needed.
-- Ensure that headings, body text, labels, and buttons remain readable across screen sizes.
+Identify, where known:
+- Primary users, their goals, needs, motivations, and barriers.
+- The specific task and its importance or risk.
+- Where, when, and on which devices the experience will be used.
+- User familiarity, language, accessibility needs, and likely connectivity constraints.
+- Product category, brand character, market expectations, and content.
+- Business goals, technical constraints, existing design systems, and success measures.
 
-**Rule:** Every typography decision must improve clarity, hierarchy, readability, or brand identity.
+Do not invent missing context. Ask a focused question when an unknown materially changes the solution; otherwise state a reasonable assumption and make it easy to revisit.
 
-## 5. Motion: Relevant, Purposeful, and Product-Specific
+## 3. Hierarchy before decoration
 
-Motion should be relevant to the product, the content, and the purpose of the specific section. I want motion to communicate meaning, demonstrate an idea, tell a story, or make an interaction more understandable—not simply decorate the interface.
+Every screen or section should make its purpose legible. Identify the main task, decision, or message, then give it the right visual priority.
 
-For example, on a car website, the hero section could show individual vehicle parts coming together to form a complete car. This animation visually reinforces the product while making the experience more engaging and memorable.
+- Use size, position, spacing, contrast, grouping, and typography to show relationships.
+- Make the primary action clear without making every secondary action compete with it.
+- Match hierarchy to task importance, not to a desire to make every element look equally impressive.
+- Use content structure to guide scanning and reading.
+- Do not force a single primary CTA onto screens where users genuinely need to compare, explore, or choose among several equally important options.
 
-- Choose motion based on the purpose and content of each section.
-- Use animations to demonstrate how something works, communicate change, guide attention, or provide interaction feedback.
-- Keep routine interface transitions subtle and responsive, typically around 150–200 milliseconds.
-- Allow longer, more elaborate animations when they provide meaningful storytelling or product value.
-- Avoid motion that distracts users, delays essential actions, or makes the experience unnecessarily slow.
-- Consider mobile devices, reduced-motion preferences, and slower internet connections.
-- Do not force animation into every section. Static design is appropriate when it communicates more effectively.
+**Review question:** Can a user quickly tell what this screen is for, what matters most, and what they can do next?
 
-**Rule:** Every animation must have a clear purpose, and its complexity must be justified by the value it adds.
+## 4. Specificity before generic polish
 
-## 6. Visual Design Must Fit the Product
+Design for the actual product, audience, task, and environment. A polished interface that could be reused unchanged for almost any product is not sufficiently considered.
 
-I do not want generic AI-looking designs that could belong to almost any product.
+- Use real product capabilities, meaningful content, relevant imagery, and accurate terminology when available.
+- Make the visual direction express the product's character rather than defaulting to a fashionable AI aesthetic.
+- Use examples and imagery that fit the audience and use case.
+- Keep familiar interaction patterns when they help users. Distinctiveness does not require novelty everywhere.
 
-- Choose colors based on the brand, audience, product context, and intended emotional response.
-- Choose typography that matches the product's personality and communication needs.
-- Build layouts around real content, information hierarchy, and user tasks.
-- Use realistic content, appropriate proportions, and meaningful information density.
-- Use gradients, glassmorphism, shadows, illustrations, and other visual effects only when they support the design direction.
-- Avoid repeating the same layout or card pattern across every section without considering the content and purpose.
-- Maintain consistency without making every product look the same.
+**Review question:** What would change in this design because we understand this particular user and task?
 
-**Rule:** A design should feel intentionally created for its specific product, users, and brand—not assembled from a generic template.
+## 5. Restraint with intention
 
-## 7. Design Judgment and Critical Review
+Remove anything that competes with the task or adds complexity without enough value. Do not confuse restraint with blandness or minimalism.
 
-I admire Sohanul Habib's Figma-based UX design work and expertise, and Shadman Rahman's expertise in AI-assisted design. I want to learn from the quality of their work while continuing to develop my own design judgment.
+- Avoid decoration that has no communicative, navigational, brand, or interaction purpose.
+- Use shadows, gradients, borders, blur, icons, and illustration selectively.
+- Prefer a clear, meaningful composition over a crowded collection of effects.
+- Keep useful detail when it supports comparison, comprehension, trust, or decision-making.
+- Do not remove information merely to achieve a minimalist appearance.
 
-Before accepting a design, critically review it:
+**Review question:** What can be removed without losing meaning, usability, identity, or trust? What must stay, even if it adds visual complexity?
 
-- Does it solve the user's problem and support the business goal?
-- Is the primary task clear?
-- Is the visual hierarchy appropriate?
-- Does the design fit the product's identity and audience?
-- Are the components, visual effects, and animations purposeful?
-- Is the experience understandable, accessible, and practical to implement?
-- Does anything feel generic, repetitive, unnecessary, or disconnected from the product?
+## 6. Typography and content hierarchy
 
-Do not approve a design simply because it looks polished. Identify the most important weakness, explain why it matters, and recommend a specific improvement.
+Typography must support reading, scanning, accessibility, and the product's character.
 
-## 8. My Final Quality Standard
+- Establish a deliberate type scale and clear roles for headings, body text, labels, metadata, and actions.
+- Use a small, purposeful set of typefaces and weights as a starting point; use more only when the content or brand genuinely benefits.
+- Check actual font rendering, language coverage, line length, line height, wrapping, and truncation.
+- Do not use tiny or low-contrast text just to fit more content into a layout.
+- Use real, specific interface copy. Prefer concrete descriptions of capabilities and actions over vague claims.
+- Ensure typography remains legible across responsive sizes and supported languages.
 
-Before considering a design ready, check that:
+There is no mandatory universal font count or type scale. Choose values that suit the product and verify them in context.
 
-- The product, users, requirements, and business goals are understood.
-- The primary user task and visual hierarchy are clear.
-- Every major component and visual element has a reason to exist.
-- Typography, colors, layout, and motion suit the product and audience.
-- The interface is usable, accessible, visually coherent, and realistic to implement.
-- The design avoids generic AI-generated patterns and unnecessary complexity.
-- Important design decisions can be explained and defended with clear reasoning.
+## 7. Color, contrast, and semantic tokens
 
-**My principle:** Do not prioritize visual impressiveness over solving the right problem. Create designs that are useful for users, valuable for the business, and visually appropriate for the product.
+Color should communicate hierarchy, state, meaning, and brand—not merely fill empty space.
+
+- Define semantic tokens such as `surface.default`, `text.primary`, `text.secondary`, `border.default`, `action.primary`, `state.success`, and `state.danger`.
+- Use consistent tokens across related screens and components.
+- Check contrast and do not rely on color alone to communicate status or meaning.
+- Use accent colors deliberately; preserve enough visual quiet for important actions and content.
+- Choose palettes based on the brand, audience, product context, and accessibility—not on trend alone.
+- Check light/dark surfaces, disabled states, focus indicators, and real content combinations where applicable.
+
+A 60/30/10 palette or a particular color family can be a useful starting point, not a universal rule.
+
+## 8. Layout, spacing, and responsive behavior
+
+Layout should reflect the content and task, not a template that is applied indiscriminately.
+
+- Use a coherent spacing scale and alignment system.
+- Use grids when they improve scanning, comparison, and consistency; change composition when content or hierarchy calls for it.
+- Preserve clear reading order and appropriate content density.
+- Test narrow and wide viewports, long labels, empty and populated content, and realistic text.
+- Avoid horizontal overflow, clipped controls, awkward wrapping, and layouts that work only with ideal placeholder content.
+- Do not force desktop patterns onto mobile or assume mobile users always have less complex needs.
+
+## 9. Interaction and state quality
+
+A screen is only one part of an experience. Design and implement the behavior around it.
+
+Consider the states relevant to each flow:
+- Default, hover, focus, pressed, selected, and disabled.
+- Loading, success, empty, error, offline, and recovery.
+- Validation, confirmation, undo, and destructive-action safeguards where appropriate.
+- Keyboard navigation, touch targets, visible focus, and assistive-technology semantics.
+- Clear feedback after meaningful user actions.
+
+Use notifications, modals, inline messages, and navigation according to the task. No component type is automatically wrong; its appropriateness depends on urgency, complexity, context, and user control.
+
+## 10. Motion with purpose
+
+Motion should communicate state changes, cause and effect, spatial relationships, or meaningful feedback. It should not obstruct the task.
+
+- Keep feedback responsive and transitions appropriate to the interaction.
+- Consider reduced-motion preferences, device performance, battery, and connectivity.
+- Avoid animation that delays critical actions or makes content harder to read.
+- Use longer motion only when it helps comprehension or supports a meaningful experience.
+- Verify motion in the actual interface rather than assuming a duration is universally correct.
+
+Treat specific durations such as 150ms as starting heuristics, not laws. Purpose, perceived responsiveness, accessibility, and real-device performance matter more than one number.
+
+## 11. Consistency without rigidity
+
+Use established product patterns and design tokens to reduce avoidable cognitive load.
+
+- Reuse components when the role and behavior are genuinely the same.
+- Keep terminology, spacing, states, and interaction behavior coherent.
+- Create a new pattern when there is a clear user or product reason.
+- Avoid both extremes: inconsistency without reason and uniformity that erases meaningful differences.
+
+## 12. Design rationale and trade-offs
+
+For consequential decisions, document:
+
+- **Decision:** What are we choosing?
+- **Reason:** Which user need, evidence, requirement, or principle supports it?
+- **Trade-off:** What are we giving up or making harder?
+- **Validation:** What observation, usability test, metric, or review could tell us whether it works?
+
+Consider alternatives when the decision is high-impact or uncertain. Do not create long explanations for trivial choices. The goal is traceable reasoning, not paperwork.
+
+## 13. Critique and refinement
+
+Before presenting work as finished:
+
+1. Compare the result with the brief and intended user task.
+2. Review hierarchy, content, interaction, accessibility, responsive behavior, and visual consistency.
+3. Identify the three most consequential weaknesses.
+4. Fix issues by user impact and severity—not by personal preference alone.
+5. Inspect realistic content and relevant states, not just the ideal first screen.
+6. State what was actually tested and what remains unverified.
+
+A first plausible output is a starting point, not proof of quality.
+
+## 14. When to break a principle
+
+Break a principle consciously when the project context or evidence supports it.
+
+A defensible exception states:
+- Which principle is being overridden.
+- Why the context warrants the exception.
+- What benefit is expected.
+- What cost or risk is accepted.
+- How the result will be checked.
+
+For example, a visually expressive animation may be justified in a brand moment but inappropriate in a repeated, time-sensitive checkout action. The context determines the decision.
+
+## 15. How this standard evolves
+
+This file is a living working standard, not a claim that every preference has already been validated.
+
+After meaningful project work, record:
+- The design decision and its context.
+- The evidence or hypothesis behind it.
+- The alternative considered.
+- The result of implementation or testing.
+- What should be kept, changed, or tested next time.
+
+Distinguish personal preference from a principle supported by repeated evidence. Update this file when real work teaches a better rule.
+
+## Hasina's current visual preferences
+
+These preferences are starting points to guide exploration, not rigid requirements for every product.
+
+- **Overall direction:** balanced premium—considered, clear, mature, and visually distinctive without unnecessary decoration.
+- **Typography:** begin with two or three purposeful typefaces at most, using a clear scale and deliberate roles. Add another only when the product has a defensible need. Verify script and language coverage.
+- **Color:** use a dominant, supporting, and accent relationship as a starting point (a 60/30/10 split can help), then adjust to the actual content, brand, and accessibility needs.
+- **Composition:** use grids, spacing, hierarchy, and contrast to create order. Do not force every screen into the same grid if the content calls for another structure.
+- **Visual exploration:** restrained navy-and-white or monochrome directions can be useful references, but must not become a default palette for every product.
+- **Motion:** routine interface transitions typically begin around 150–200ms; longer, expressive motion is appropriate when it tells a product-relevant story or improves understanding. Respect reduced-motion preferences and verify performance.
+- **Learning references:** I admire Sohanul Habib's Figma-based UX work and Shadman Rahman's AI-assisted design expertise. Learn from the craft and reasoning, but do not copy their style blindly; build judgment that fits each project's users and identity.
+
+When a preference conflicts with user needs, accessibility, evidence, or product requirements, explain the conflict and prioritize the experience over personal taste.
+
+## Quick design review
+
+Before sign-off, ask:
+
+- Is the user problem clear, and does this design address it?
+- Is the main task or decision easy to understand?
+- Is the interface specific to its product and audience?
+- Is every major visual choice intentional?
+- Are typography, color, spacing, and components coherent?
+- Are accessibility and responsive behavior considered?
+- Are important interaction and system states covered?
+- Does motion improve rather than interrupt the experience?
+- Are claims, content, and product capabilities accurate?
+- What is the biggest remaining weakness, and what evidence would help resolve it?
+
+**Quality standard:** useful before beautiful, clear without being generic, distinctive without being decorative, and polished without sacrificing accessibility or task success.

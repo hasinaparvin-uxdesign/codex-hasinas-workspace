@@ -8,6 +8,14 @@
 4. Identify documented facts, draft proposals, assumptions, approved decisions, and unverified claims before acting. A finding marked FIX in a historical report does not establish that a source design was updated or the owner approved it.
 5. Read the relevant procedure from `skills/` for substantial design or career work. `.agents/skills/` provides Codex entry points that route to these canonical files; do not maintain a competing copy of the procedure there.
 
+## Applying design standards consistently
+
+- For any substantive design proposal, screen generation, frontend implementation, or visual review, apply `principles/design-taste.md` and `principles/anti-ai-slop.md` as a paired standard: the first guides decisions; the second checks risks and omissions.
+- Before implementation, identify the user task, product context, constraints, success criteria, and material unknowns. Do not jump straight to visual styling when the problem or requirements are unclear.
+- For consequential design choices, explain the decision, supporting evidence or hypothesis, trade-off, and how it could be validated. Preserve the owner's design authority.
+- Before reporting a substantial design task as complete, follow `skills/design-review.md` or the most relevant project-specific review workflow. Prioritize P0/P1 issues, check relevant interaction states and accessibility/responsive behavior, and state what was not verified.
+- Do not mechanically reject a style because it appears on the anti-slop list. Judge whether it serves the actual user, task, product identity, and constraints. Do not claim tests, implementation, or user validation that did not happen.
+
 ## Authority and scope
 
 - Follow the owner's current request and preserve their final product and design authority. Apply the shared working agreement and the selected project's requirements together. If they conflict materially, explain the conflict and obtain the owner's decision before dependent work.
