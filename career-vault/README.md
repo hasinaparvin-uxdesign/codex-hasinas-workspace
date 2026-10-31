@@ -15,3 +15,7 @@ This is the reference workspace's six-part career structure with original, unfil
 Codex can help fill these when asked, using the owner's evidence and project logs. Optional future project stories belong in a portfolio-stories subfolder; job drafts belong in an applications subfolder when there is an actual application. The [application-pack workflow](../skills/application-pack.md) must identify missing evidence and prepare drafts only, without sending or applying.
 
 This repository is public. Keep private contact details, confidential work, and sensitive employment material out unless the owner explicitly intends to publish them. Creating these templates does not authorize filling or sharing personal information.
+
+## Project stories
+
+- [eBitans — from website setup to everyday commerce](portfolio-stories/portfolio-story.md): retrospective case study with explicit contribution boundaries, decision rationale, evidence provenance, and unverified-outcome limits.
