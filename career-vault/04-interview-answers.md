@@ -1,6 +1,6 @@
 # Interview answer bank
 
-**Status: Class 8 push-back answer drafted.** Other sections still require role-specific evidence and review.
+**Status:push-back answer drafted.** Other sections still require role-specific evidence and review.
 
 ## Contribution and AI assistance
 
@@ -48,10 +48,4 @@ That experience reflects how I approach design: understand the real problem, cha
 
 Customers managing an online store and a physical-shop POS could face duplicated product-management work and inventory inconsistencies. I spoke with customers, helped clarify the problem and requirements, contributed to user-flow and UI direction, and discussed feasibility with developers. The team introduced connected product-management and inventory capability, including stock reduction in the connected POS when a product sold online. Do not claim complete bidirectional syncing or quantified reductions in errors without evidence.
 
-## Disagreement, mistakes, and scope decisions
 
-_Not supplied._ Do not invent a disagreement or outcome to complete the structure.
-
-## Questions for the employer
-
-_Not supplied._ Adapt to the specific role and known context.
